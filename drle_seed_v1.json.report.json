@@ -1,0 +1,11 @@
+{
+  "model": "artifacts/drle_seed_v1.json",
+  "examples": 114,
+  "token_count": 1304,
+  "sequence_count": 114,
+  "unique_contexts": 5126,
+  "unique_transitions": 6203,
+  "model_bytes": 256537,
+  "corpus_sha256": "2f1ced2403d07c1f90a57e212578bad8d6f136e4ad7a217eefdbf326ed45c87e",
+  "max_order": 5
+}

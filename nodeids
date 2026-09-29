@@ -1,0 +1,8 @@
+[
+  "tests/test_model.py::test_context_order_matters",
+  "tests/test_model.py::test_plain_text_corpus_reader",
+  "tests/test_model.py::test_repeatable_and_stable_tie_break",
+  "tests/test_model.py::test_save_load_roundtrip",
+  "tests/test_model.py::test_tokenizer_deterministic",
+  "tests/test_model.py::test_unknown_context_halts"
+]

@@ -1,0 +1,114 @@
+A language model predicts a sequence of tokens from an available context.
+A deterministic engine returns the same result for the same input and model version.
+A relational language engine stores observed connections between ordered contexts and candidate tokens.
+A context is an ordered sequence because word order changes meaning.
+A set can test membership but cannot preserve repeated words or sequence order.
+A sparse index stores only relationships that have evidence in the training corpus.
+A dense Cartesian product wastes work when most possible relationships are absent.
+A candidate generator retrieves only tokens connected to a matching context.
+A scoring function ranks candidates using counts and configured context weights.
+A stable tie breaker makes equal scores produce reproducible output.
+A model should report when it has no supported continuation.
+An unknown context does not prove that a sentence is invalid.
+A backoff policy searches shorter context suffixes when a longer context is unseen.
+A longer context can be more specific but may have fewer observations.
+A short context has broader coverage but can mix unrelated meanings.
+A variable order model balances specificity and coverage.
+A token is an addressable unit selected by a tokenizer.
+A tokenizer must have a stable version shared by training and inference.
+A tokenizer mismatch can make a stored model unusable.
+A subword tokenizer can represent words that were not present as complete vocabulary items.
+A punctuation policy affects token boundaries and generated text formatting.
+Unicode normalization should be explicit and tested.
+A corpus contains examples used to estimate language patterns.
+Training data should be separated from evaluation data.
+Near duplicate documents can cause data leakage across dataset splits.
+A held out test set measures behavior on examples excluded from training.
+A validation set can guide pruning and scoring choices.
+A benchmark should record its dataset revision and evaluation procedure.
+A model report should include token counts and unique transition counts.
+A model report should include the corpus digest and tokenizer version.
+A reproducible build uses pinned configuration and deterministic processing.
+A training pipeline should reject malformed records with a clear diagnostic.
+A data adapter should inspect the actual dataset schema before extraction.
+Instruction data contains prompts and responses rather than only ordinary prose.
+Conversation boundaries should not be confused with sentence boundaries.
+Assistant responses can be conditioned on preceding user messages.
+A prompt and response pair should remain associated during preprocessing.
+A factual statement is not true merely because it appeared in training text.
+Observed language relationships are not a substitute for evidence.
+A factual answer should retain source provenance when evidence is retrieved.
+A retrieval system searches documents for information relevant to a query.
+A validator checks whether a proposed answer follows the application's constraints.
+An abstention is safer than an unsupported factual assertion.
+A rule engine can enforce formats without learning every valid sequence.
+A finite state machine represents allowed transitions between explicit states.
+A grammar constraint can reject structurally invalid token sequences.
+A template can produce predictable output for a narrowly defined task.
+A template system does not provide unrestricted language understanding.
+A language model can be useful without being a general reasoning system.
+A small prototype should test one measurable hypothesis at a time.
+A baseline provides a reference for evaluating a new architecture.
+An n gram model estimates a next token from a finite context window.
+A variable order relational model is closely related to an n gram model.
+A benchmark should compare quality as well as memory and latency.
+A fast model that produces poor text may not be useful.
+A compact model can still have poor coverage on unfamiliar topics.
+A corpus with diverse examples can improve observed context coverage.
+A larger corpus does not guarantee better generation in every domain.
+A training corpus must be used in accordance with its license.
+A dataset card can describe intended use and known limitations.
+A dataset should be inspected before its records are transformed.
+A data pipeline should preserve the source split labels.
+A model artifact should be immutable after publication.
+A model file should include a format version and integrity checksum.
+A loader should reject unsupported model formats.
+A binary format can reduce storage overhead compared with verbose JSON.
+A memory mapped file can expose read only model data without copying all bytes.
+A compressed sparse row layout stores adjacency lists in contiguous arrays.
+A trie can share prefixes among related contexts.
+A hash index can provide expected constant time lookup under suitable conditions.
+A cache can reduce repeated context lookup work.
+A cache should have a defined memory limit and eviction policy.
+A runtime should avoid allocating a large candidate structure for every token.
+Integer scoring can provide deterministic arithmetic when overflow is controlled.
+A score definition should specify its range and overflow behavior.
+A model should define how end of sequence is represented.
+A decoder should stop when it emits a valid end of sequence token.
+A repetition control should be explicit rather than hidden in scoring.
+A generation limit prevents unbounded output loops.
+A service should enforce request size and execution limits.
+A serverless worker is not a dedicated machine with guaranteed CPU cores.
+A free cloud tier can impose strict per request compute limits.
+A browser can run a compact inference engine through WebAssembly.
+Local inference can reduce server compute but uses the device resources of the user.
+A web interface should not block while inference is running.
+A web worker can keep compute intensive browser tasks off the main thread.
+An application programming interface should validate input before model execution.
+A deployment should expose model version and health information.
+Logs should avoid storing sensitive user prompts unless explicitly required.
+A test should verify behavior rather than only confirm that code imports.
+A unit test isolates a small and well defined behavior.
+An integration test checks interactions between components.
+A determinism test repeats the same inference under identical conditions.
+A performance test should measure realistic context and candidate distributions.
+A memory benchmark should include indexes and runtime overhead.
+A regression test protects previously verified behavior.
+A failed test should produce enough context to diagnose the defect.
+A skipped test should have a documented reason.
+A feature is not complete merely because its source code exists.
+A release should include documentation and known limitations.
+An engineering decision log records important tradeoffs and their rationale.
+A modular design lets the tokenizer evolve without rewriting the user interface.
+A stable model format separates training code from inference code.
+A small team benefits from simple interfaces and clear ownership.
+The first release should prioritize correctness and observability.
+The next release should be guided by measured bottlenecks.
+Optimization should preserve tested semantics unless a change is intentional.
+A benchmark result should identify hardware and software versions.
+The relation explorer can show which context supported a candidate token.
+An audit trace can explain a score without claiming that the output is true.
+The system should distinguish learned patterns from explicit rules.
+The system should distinguish generated text from retrieved evidence.
+A controlled experiment changes one important variable at a time.
+A useful model has measurable goals and known failure conditions.
